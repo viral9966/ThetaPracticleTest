@@ -70,6 +70,7 @@ public class ProfileFragment extends Fragment {
                         dialog.cancel();
                         Intent intent = new Intent(getActivity(), LoginActivity.class);
                         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK|Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                        startActivity(intent);
                     }
                 }).show();
     }
