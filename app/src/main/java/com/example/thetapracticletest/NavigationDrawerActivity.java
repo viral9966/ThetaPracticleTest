@@ -74,18 +74,16 @@ public class NavigationDrawerActivity extends AppCompatActivity implements Navig
             @Override
             public void pageHasBeenChanged(int position) {
                 //Change fragments here or... or something
-                if (controller.getCurrentItem() != 1 && position == 1) {
+                if (position == 1) {
                     navigationView.setCheckedItem(R.id.nav_map);
                     setFragment(new MapFragment(),getString(R.string.menu_map));
 
-                } else if (controller.getCurrentItem() != 2 && position == 2){
+                } else if (position == 2){
                     navigationView.setCheckedItem(R.id.nav_profile);
                     setFragment(new ProfileFragment(),getString(R.string.menu_profile));
                 } else {
-                    if (controller.getCurrentItem() != 0) {
                         navigationView.setCheckedItem(R.id.nav_home);
                         setFragment(new HomeFragment(), getString(R.string.menu_home));
-                    }
                 }
             }
         });
