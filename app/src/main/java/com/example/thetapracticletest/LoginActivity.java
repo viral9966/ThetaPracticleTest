@@ -90,7 +90,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             if (editTextEmail.getText().toString().equalsIgnoreCase(AppConstants.AuthUserKey)
                     && editTextPassword.getText().toString().equalsIgnoreCase(AppConstants.AuthUserPassValue)) {
                 appPref.setLoggedInUser(AppConstants.GetLoggedInStatusValue);
-                Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                Intent intent = new Intent(LoginActivity.this, NavigationDrawerActivity.class);
                 startActivity(intent);
                 finish();
             } else {

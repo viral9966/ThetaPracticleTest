@@ -76,14 +76,14 @@ public class NavigationDrawerActivity extends AppCompatActivity implements Navig
                 //Change fragments here or... or something
                 if (position == 1) {
                     navigationView.setCheckedItem(R.id.nav_map);
-                    setFragment(new HomeFragment(),getString(R.string.menu_map));
+                    setFragment(new MapFragment(),getString(R.string.menu_map));
 
                 } else if (position == 2){
                     navigationView.setCheckedItem(R.id.nav_profile);
-                    setFragment(new MapFragment(),getString(R.string.menu_profile));
+                    setFragment(new ProfileFragment(),getString(R.string.menu_profile));
                 } else {
                     navigationView.setCheckedItem(R.id.nav_home);
-                    setFragment(new ProfileFragment(),getString(R.string.menu_home));
+                    setFragment(new HomeFragment(),getString(R.string.menu_home));
                 }
             }
         });
